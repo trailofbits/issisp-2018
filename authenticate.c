@@ -36,15 +36,17 @@ bool verify_pin(bool *is_admin) {
 
 int main(int argc, char *argv[]) {
   bool is_admin = false;
-  if (!verify_pin(&is_admin)) {
-    return EXIT_FAILURE;
-  }
+  bool is_logged = verify_pin(&is_admin);
 
   if (is_admin) {
     admin_control();
-  } else {
-    user_control();
-  }
+    return EXIT_SUCCESS;
 
-  return EXIT_SUCCESS;
+  } else if (is_logged) {
+    user_control();
+    return EXIT_SUCCESS;
+
+  } else {
+    return EXIT_FAILURE;
+  }
 }
