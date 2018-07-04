@@ -15,7 +15,7 @@ void user_control(void) {
   // ...
 }
 
-int verify_pin(bool *is_admin) {
+bool verify_pin(bool *is_admin) {
 
   char pin[5];
   
@@ -23,14 +23,14 @@ int verify_pin(bool *is_admin) {
   gets(pin);
   
   if (!strcmp(pin, "1337")) {
-    return 1;
+    return true;
 
   } else if (!strcmp(pin, "w00t")) {
-    *is_admin = 1;
-    return 1;
+    *is_admin = true;
+    return true;
 
   } else {
-    return 0;
+    return false;
   }
 }
 
