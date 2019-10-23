@@ -1,6 +1,23 @@
-# ISSISP 2018 Workshop Materials
+# Lifting program binaries with McSema
 
-This repository contains files used in the ISSISP 2018 workshop describing binary lifting using McSema.
+## Presented at
+ * [ISSISP 2018](https://www.issisp.org/2018/)
+
+##  Authored by
+ * Peter Goodman
+ * Akshay Kumar
+
+## Prerequisites
+
+- `git clone https://github.com/trailofbits/publications`
+- `cd "workshops/Lifting program binaries with McSema"`
+- Install https://github.com/lifting-bits/mcsema
+
+# Course content
+
+This workshop describes how to use [McSema](https://github.com/lifting-bits/mcsema), a binary lifter framework, to patch vulnerable binaries.
+
+Consider joining a community of security engineers and the developers of McSema in the [Empire Hacking Slack](https://empireslacking.herokuapp.com) (#binary-lifting).
 
 ## Authentication bypass
 
